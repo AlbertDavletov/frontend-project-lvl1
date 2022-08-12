@@ -29,5 +29,9 @@ export const StepsOfGcdNumberGame = 3;
 
 // Progression game
 export const ProgressionGameWelcomeMessage = 'What number is missing in the progression?';
-export const StepsOfProgressionNumberGame = 3;
+export const StepsOfProgressionGame = 3;
 export const ProgressionLength = 10;
+
+// Prime game
+export const PrimeGameWelcomeMessage = `Answer "${YesAnswer}" if given number is prime. Otherwise answer "${NoAnswer}".`;
+export const StepsOfPrimeNumberGame = 3;
