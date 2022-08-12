@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 import greeting from '../src/cli.js';
-import brainEven from '../src/games/brain-even.js';
+import brainCalc from '../src/games/brain-calc.js';
 
 const startGame = () => {
   const name = greeting();
-  brainEven(name);
+  brainCalc(name);
 };
 
 startGame();
