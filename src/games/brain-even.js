@@ -14,6 +14,11 @@ const getQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-const brainEven = (userName) => startGame(userName, EvenNumGameWelcomeMessage, StepsOfEvenNumberGame, getQuestionAndAnswer);
+const brainEven = (userName) => startGame(
+  userName,
+  EvenNumGameWelcomeMessage,
+  StepsOfEvenNumberGame,
+  getQuestionAndAnswer,
+);
 
 export default brainEven;

@@ -11,6 +11,11 @@ const getQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-const brainGcd = (userName) => startGame(userName, GcdGameWelcomeMessage, StepsOfGcdNumberGame, getQuestionAndAnswer);
+const brainGcd = (userName) => startGame(
+  userName,
+  GcdGameWelcomeMessage,
+  StepsOfGcdNumberGame,
+  getQuestionAndAnswer,
+);
 
 export default brainGcd;

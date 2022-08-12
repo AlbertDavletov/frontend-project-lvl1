@@ -11,6 +11,11 @@ const getQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-const brainPrime = (userName) => startGame(userName, PrimeGameWelcomeMessage, StepsOfPrimeNumberGame, getQuestionAndAnswer);
+const brainPrime = (userName) => startGame(
+  userName,
+  PrimeGameWelcomeMessage,
+  StepsOfPrimeNumberGame,
+  getQuestionAndAnswer,
+);
 
 export default brainPrime;

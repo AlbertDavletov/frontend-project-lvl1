@@ -16,7 +16,8 @@ export const YesAnswer = 'yes';
 export const NoAnswer = 'no';
 
 // Even Number game
-export const EvenNumGameWelcomeMessage = `Answer "${YesAnswer}" if the number is even, otherwise answer "${NoAnswer}".`;
+export const EvenNumGameWelcomeMessage = `Answer "${YesAnswer}" if the number is even, 
+    otherwise answer "${NoAnswer}".`;
 export const StepsOfEvenNumberGame = 3;
 
 // Calc game
@@ -33,5 +34,6 @@ export const StepsOfProgressionGame = 3;
 export const ProgressionLength = 10;
 
 // Prime game
-export const PrimeGameWelcomeMessage = `Answer "${YesAnswer}" if given number is prime. Otherwise answer "${NoAnswer}".`;
+export const PrimeGameWelcomeMessage = `Answer "${YesAnswer}" if given number is prime.
+ Otherwise answer "${NoAnswer}".`;
 export const StepsOfPrimeNumberGame = 3;

@@ -1,6 +1,10 @@
 import startGame from './start-game.js';
 import { getRndNumber } from '../utils.js';
-import { ProgressionGameWelcomeMessage, StepsOfProgressionGame, ProgressionLength } from '../constants.js';
+import {
+  ProgressionGameWelcomeMessage,
+  StepsOfProgressionGame,
+  ProgressionLength,
+} from '../constants.js';
 
 const maxInitialNum = 10;
 const maxProgressionDiff = 5;
@@ -22,6 +26,11 @@ const getQuestionAndAnswer = () => {
   return [question.trim(), arr[missingIndex].toString()];
 };
 
-const brainProgression = (userName) => startGame(userName, ProgressionGameWelcomeMessage, StepsOfProgressionGame, getQuestionAndAnswer);
+const brainProgression = (userName) => startGame(
+  userName,
+  ProgressionGameWelcomeMessage,
+  StepsOfProgressionGame,
+  getQuestionAndAnswer,
+);
 
 export default brainProgression;

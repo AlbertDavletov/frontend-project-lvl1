@@ -12,6 +12,11 @@ const getQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-const brainCalc = (userName) => startGame(userName, CalcGameWelcomeMessage, StepsOfCalcNumberGame, getQuestionAndAnswer);
+const brainCalc = (userName) => startGame(
+  userName,
+  CalcGameWelcomeMessage,
+  StepsOfCalcNumberGame,
+  getQuestionAndAnswer,
+);
 
 export default brainCalc;

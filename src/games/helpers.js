@@ -16,9 +16,12 @@ export const getUserResponse = () => readlineSync.question(`${YourAnswer}: `);
 export const isCorrectAnswer = (answer, userResponse, userName) => {
   const isCorrect = answer === userResponse;
 
+  const wrongSuffix = `'${userResponse}' ${WrongAnswerSuffix}`;
+  const correctPrefix = `${CorrectAnswerPrefix} '${answer}`;
+  const tryAgain = `${TryAgain}, ${userName}!`;
   const result = isCorrect
     ? CorrectAnswer
-    : `'${userResponse}' ${WrongAnswerSuffix} ${CorrectAnswerPrefix} '${answer}'.\n${TryAgain}, ${userName}!`;
+    : `'${wrongSuffix}' ${correctPrefix}'.\n${tryAgain}`;
   showMessage(result);
 
   return isCorrect;
