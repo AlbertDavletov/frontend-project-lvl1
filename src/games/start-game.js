@@ -1,6 +1,6 @@
 import { Congrats, Question } from '../constants.js';
 import {
-  getUserResponse, isCorrectAnswer, showMessage, checkExit, updateSteps,
+  getUserResponse, isCorrectAnswer, showMessage, checkExit,
 } from './helpers.js';
 
 const startGame = (userName, welcome, stepsNum, getQuestionAndAnswer) => {
@@ -16,7 +16,11 @@ const startGame = (userName, welcome, stepsNum, getQuestionAndAnswer) => {
     }
 
     const correct = isCorrectAnswer(answer, userResponse, userName);
-    steps = updateSteps(correct, steps);
+    if (correct) {
+      steps += 1;
+    } else {
+      return;
+    }
   }
 
   showMessage(`${Congrats}, ${userName}!`);
