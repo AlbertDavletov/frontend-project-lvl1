@@ -26,3 +26,8 @@ export const StepsOfCalcNumberGame = 3;
 // Gcd game
 export const GcdGameWelcomeMessage = 'Find the greatest common divisor of given numbers.';
 export const StepsOfGcdNumberGame = 3;
+
+// Progression game
+export const ProgressionGameWelcomeMessage = 'What number is missing in the progression?';
+export const StepsOfProgressionNumberGame = 3;
+export const ProgressionLength = 10;
