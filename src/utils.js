@@ -1,4 +1,4 @@
-import { Exit, MaxNumber, ExitMessage } from './constants.js';
+import { MaxNumber } from './constants.js';
 
 const RandomOperators = ['+', '-', '*'];
 
@@ -9,14 +9,12 @@ export const isEvenNumber = (num) => num % 2 === 0;
  */
 export const getRndNumber = (max = MaxNumber) => Math.floor(Math.random() * max);
 
-export const showMessage = (message) => console.log(message);
-
-export const checkExit = (command) => {
-  const isExit = command === Exit;
-  if (isExit) {
-    showMessage(ExitMessage);
+export const gcd = (a, b) => {
+  if (!b) {
+    return a;
   }
-  return isExit;
+
+  return gcd(b, a % b);
 };
 
 export const getRndOperator = () => {
@@ -35,16 +33,4 @@ export const calculate = (a, b, operator) => {
     default:
       return null;
   }
-};
-
-export const updateSteps = (isCorrectStep, steps) => {
-  // if this is the correct answer, increase the steps,
-  // otherwise decrease, but not less than 0.
-  if (isCorrectStep) {
-    return steps + 1;
-  } if (steps > 0) {
-    return steps - 1;
-  }
-
-  return 0;
 };

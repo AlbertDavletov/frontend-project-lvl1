@@ -1,30 +1,6 @@
-import readlineSync from 'readline-sync';
-import {
-  getRndNumber, getRndOperator, calculate, showMessage, checkExit, updateSteps,
-} from '../utils.js';
-import {
-  CalcGameWelcomeMessage,
-  Congrats,
-  Question,
-  YourAnswer,
-  CorrectAnswerPrefix,
-  WrongAnswerSuffix,
-  StepsOfCalcNumberGame,
-  CorrectAnswer,
-} from '../constants.js';
-
-const getUserResponse = () => readlineSync.question(`${YourAnswer}: `);
-
-const isCorrectAnswer = (answer, userResponse, showResult = true) => {
-  const isCorrect = answer === userResponse;
-
-  if (showResult) {
-    const result = isCorrect ? CorrectAnswer : `'${userResponse}' ${WrongAnswerSuffix} ${CorrectAnswerPrefix} '${answer}'.`;
-    showMessage(result);
-  }
-
-  return isCorrect;
-};
+import startGame from './start-game.js';
+import { getRndNumber, getRndOperator, calculate } from '../utils.js';
+import { CalcGameWelcomeMessage, StepsOfCalcNumberGame } from '../constants.js';
 
 const getQuestionAndAnswer = () => {
   const rndFirstNum = getRndNumber();
@@ -36,23 +12,6 @@ const getQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-const brainCalc = (userName) => {
-  showMessage(CalcGameWelcomeMessage);
-
-  let steps = 0;
-  while (steps < StepsOfCalcNumberGame) {
-    const [question, answer] = getQuestionAndAnswer();
-    showMessage(`${Question}, ${question}`);
-    const userResponse = getUserResponse();
-    if (checkExit(userResponse)) {
-      return;
-    }
-
-    const correct = isCorrectAnswer(answer, userResponse);
-    steps = updateSteps(correct, steps);
-  }
-
-  showMessage(`${Congrats}, ${userName}!`);
-};
+const brainCalc = (userName) => startGame(userName, CalcGameWelcomeMessage, StepsOfCalcNumberGame, getQuestionAndAnswer);
 
 export default brainCalc;

@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { showMessage } from './utils.js';
+import { showMessage } from './games/helpers.js';
 import { WelcomeMessage, YourName, Hello } from './constants.js';
 
 const greeting = () => {
