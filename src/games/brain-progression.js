@@ -19,7 +19,7 @@ const getQuestionAndAnswer = () => {
     question = missingIndex === i ? `${question} ..` : `${question} ${item}`;
   }
 
-  return [question, arr[missingIndex].toString()];
+  return [question.trim(), arr[missingIndex].toString()];
 };
 
 const brainProgression = (userName) => startGame(userName, ProgressionGameWelcomeMessage, StepsOfProgressionGame, getQuestionAndAnswer);
